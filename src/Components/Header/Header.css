@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position: fixed;    /* Fixes the navbar in place */
+    top: 0;
+    width: 100%;
+    background-color: black;
+    height: 60px;
+    z-index: 1000; 
+}
+header:hover{
+    background-color: orange;
+    transition: 1s;
+}
+li{
+    list-style: none;
+    color: #fff;
+}
+header nav{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    margin-left: 5%;
+}
+.header-content ul{   
+    width: 400px; 
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+.menu{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right:20px;
+}
+.down-menu{
+    width: 25%;
+    background-color:rgba(0, 0, 0, 0.2);
+    margin-top: 50px; 
+}
+.down-menu ul{
+    display: inline;
+    text-align: center;
+}
+.down-menu ul li {
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+.down-menu ul li:hover{
+    background-color: black;
+}
+.logo-color {
+    color: red; /* Change this to the color or style you want */
+}
+@media (max-width:600px) {
+    .menu{
+    display: block;
+}
+    .header-content{
+        display: none;
+    }
+}
+.margin{
+    margin-bottom: 50px;
+}
+/* *************************************************** */
+
+
+
+.header-content {
+    display: none; /* Initially hidden, shown only when conditions match */
+}
+
+.down-menu {
+    display: block; /* Displayed when menu is toggled open */
+}
+
+/* Toggle button styling */
+.menu {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Media query for screens larger than 600px */
+@media (min-width: 601px) {
+    .header-content {
+        display: block; /* Always show menu content on larger screens */
+    }
+    .menu {
+        display: none; /* Hide toggle button on larger screens */
+    }
+}
